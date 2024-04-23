@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home-page">
+      <h1>Shop System</h1>
+      <h2><i>Created by Jake Farrell - 22349856</i></h2>
+        <a href="/categories" className="btn btn-primary create-button">View All Categories</a>
+        <a href="/customers" className="btn btn-primary create-button">View All Customers</a>
+        <a href="/products" className="btn btn-primary create-button">View All Products</a>
+        <a href="/create-category" className="btn btn-primary create-button">Create New Category</a>
     </div>
   );
 }
