@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewAllCategories from './components/view-all-categories';
 import ViewAllCustomers from './components/view-all-customers';
 import ViewAllProducts from './components/view-all-products';
+import ViewAllOrders from './components/view-all-orders';
 import CreateCategory from './components/create-category';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -36,6 +37,12 @@ root.render(
         <Route path="/products" element={
         <div>
           <ViewAllProducts />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/orders" element={
+        <div>
+          <ViewAllOrders />
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />

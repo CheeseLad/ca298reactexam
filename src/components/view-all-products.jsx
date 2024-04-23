@@ -21,7 +21,7 @@ function ViewAllProducts() {
                   <h5 className="card-title">{product.name}</h5>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item"><strong>Price: </strong>€{product.price}</li>
-                    <li className="list-group-item"><strong>Category: </strong>{product.category}</li>
+                    <li className="list-group-item"><strong>Category: </strong><a href="{product.category}">{product.category}</a></li>
                   </ul>
                 </div>
               </div>

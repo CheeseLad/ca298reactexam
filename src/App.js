@@ -8,6 +8,7 @@ function App() {
         <a href="/categories" className="btn btn-primary create-button">View All Categories</a>
         <a href="/customers" className="btn btn-primary create-button">View All Customers</a>
         <a href="/products" className="btn btn-primary create-button">View All Products</a>
+        <a href="/orders" className="btn btn-primary create-button">View All Orders</a>
         <a href="/create-category" className="btn btn-primary create-button">Create New Category</a>
     </div>
   );
