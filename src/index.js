@@ -7,9 +7,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewAllCategories from './components/view-all-categories';
+import ViewSingleCategory from './components/view-single-category';
 import ViewAllCustomers from './components/view-all-customers';
+import ViewSingleCustomer from './components/view-single-customer';
 import ViewAllProducts from './components/view-all-products';
+import ViewSingleProduct from './components/view-single-product';
 import ViewAllOrders from './components/view-all-orders';
+import ViewSingleOrder from './components/view-single-order';
 import CreateCategory from './components/create-category';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,9 +32,21 @@ root.render(
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />
+        <Route path="/category/:category" element={
+        <div>
+          <ViewSingleCategory />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
         <Route path="/customers" element={
         <div>
           <ViewAllCustomers />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/customer/:customer" element={
+        <div>
+          <ViewSingleCustomer />
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />
@@ -40,9 +56,21 @@ root.render(
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />
+        <Route path="/product/:product" element={
+        <div>
+          <ViewSingleProduct />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
         <Route path="/orders" element={
         <div>
           <ViewAllOrders />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/order/:order" element={
+        <div>
+          <ViewSingleOrder />
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />
