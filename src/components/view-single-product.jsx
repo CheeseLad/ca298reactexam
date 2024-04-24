@@ -11,6 +11,12 @@ function ViewSingleProduct() {
       .then((data) => setData(data));
   }, [product]);
 
+  const getIDFromUrl = (id) => {
+    if (!id) return "";
+    const segments = id.split("/");
+    return segments[segments.length - 2];
+  };
+
   const displayProduct = () => {
     return (
       <div className="container custom-box single-box">
@@ -22,7 +28,7 @@ function ViewSingleProduct() {
                 <h5 className="card-title">{data.name}</h5>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item"><strong>Price: </strong>€{data.price}</li>
-                    <li className="list-group-item"><strong>Category: </strong><a href={`${data.category}`}>{data.category}</a></li>
+                    <li className="list-group-item"><strong>Category: </strong><a href={`/category/${getIDFromUrl(data.category)}`}>{getIDFromUrl(data.category)}</a></li>
                   </ul>
                 </div>
             </div>

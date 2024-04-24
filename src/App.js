@@ -13,6 +13,7 @@ function App() {
         <a href="/create-product" className="btn btn-primary create-button">Create New Product</a>
         <a href="/create-customer" className="btn btn-primary create-button">Create New Customer</a>
         <a href="/create-order" className="btn btn-primary create-button">Create New Order</a>
+        <a href="/create-order-items" className="btn btn-primary create-button">Add Item To Order</a>
     </div>
   );
 }

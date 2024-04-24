@@ -18,6 +18,7 @@ import CreateCategory from './components/create-category';
 import CreateProduct from './components/create-product';
 import CreateCustomer from './components/create-customer';
 import CreateOrder from './components/create-order';
+import CreateOrderItems from './components/create-order-items';
 import ViewOrderItems from './components/view-order-items';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -105,6 +106,12 @@ root.render(
         <Route path="/create-order" element={
         <div>
           <CreateOrder />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/create-order-items" element={
+        <div>
+          <CreateOrderItems />
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />
