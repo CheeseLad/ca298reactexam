@@ -26,6 +26,7 @@ function ViewAllOrders() {
                   </ul>
                   <div className="button-container">
                     <a href={`/customer/${order.customer.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Customer Information</a>
+                    <a href={`/orderitems/${order.url.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Items Ordered</a>
                   </div>
                 </div>
               </div>
