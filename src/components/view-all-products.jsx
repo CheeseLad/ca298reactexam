@@ -21,8 +21,11 @@ function ViewAllProducts() {
                   <h5 className="card-title">{product.name}</h5>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item"><strong>Price: </strong>€{product.price}</li>
-                    <li className="list-group-item"><strong>Category: </strong><a href="{product.category}">{product.category}</a></li>
+                    <li className="list-group-item"><strong>Category: </strong><a href={`/category/${product.category.split('/').filter(part => !!part).pop()}`}>{product.category.split('/').filter(part => !!part).pop()}</a></li>
                   </ul>
+                  <div className="button-container">
+                    <a href={`/product/${product.url.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Product Information</a>
+                  </div>
                 </div>
               </div>
             </div>

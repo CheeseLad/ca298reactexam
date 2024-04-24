@@ -15,6 +15,10 @@ import ViewSingleProduct from './components/view-single-product';
 import ViewAllOrders from './components/view-all-orders';
 import ViewSingleOrder from './components/view-single-order';
 import CreateCategory from './components/create-category';
+import CreateProduct from './components/create-product';
+import CreateCustomer from './components/create-customer';
+import CreateOrder from './components/create-order';
+import ViewOrderItems from './components/view-order-items';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -74,9 +78,33 @@ root.render(
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />
+        <Route path="/orderitems/:orderitems" element={
+        <div>
+          <ViewOrderItems />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
         <Route path="/create-category" element={ 
         <div>
           <CreateCategory />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/create-product" element={
+        <div>
+          <CreateProduct />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/create-customer" element={
+        <div>
+          <CreateCustomer />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/create-order" element={
+        <div>
+          <CreateOrder />
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />

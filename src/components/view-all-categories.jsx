@@ -22,6 +22,9 @@ function ViewAllCategories() {
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item"><strong>Shortcode: </strong>{category.shortcode}</li>
                   </ul>
+                  <div className="button-container">
+                    <a href={`/category/${category.shortcode}`} className="btn btn-primary mr-2">View Category Information</a>
+                  </div>
                 </div>
               </div>
             </div>

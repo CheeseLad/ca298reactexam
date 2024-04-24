@@ -36,27 +36,27 @@ const CreateCategory = () => {
       <div className="container custom-box single-box">
         <h2>Create a New Category</h2>
         <form onSubmit={handleSubmit}>
+        <div className="form-group">
+            <label htmlFor="shortcode">Shortcode:</label>
+            <input
+              type="text"
+              className="form-control"
+              id="shortcode"
+              placeholder="Example: tops"
+              value={shortcode}
+              maxLength={5}
+              onChange={(e) => setShortcode(e.target.value)}
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="displayName">Display Name:</label>
             <input
               type="text"
               className="form-control"
               id="displayName"
-              placeholder="Example: Coats"
+              placeholder="Example: Tops"
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="shortcode">Shortcode:</label>
-            <input
-              type="text"
-              className="form-control"
-              id="shortcode"
-              placeholder="Example: coat"
-              value={shortcode}
-              maxLength={5}
-              onChange={(e) => setShortcode(e.target.value)}
             />
           </div>
           <button type="submit" className="btn btn-primary">
