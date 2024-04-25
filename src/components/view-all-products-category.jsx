@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function ViewAllProductsCategory() {
   const [data, setData] = useState([]);
@@ -23,10 +23,10 @@ function ViewAllProductsCategory() {
                   <h5 className="card-title">{product.name}</h5>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item"><strong>Price: </strong>€{product.price}</li>
-                    <li className="list-group-item"><strong>Category: </strong><a href={`/category/${product.category.split('/').filter(part => !!part).pop()}`}>{product.category.split('/').filter(part => !!part).pop()}</a></li>
+                    <li className="list-group-item"><strong>Category: </strong><Link to={`/category/${product.category.split('/').filter(part => !!part).pop()}`}>{product.category.split('/').filter(part => !!part).pop()}</Link></li>
                   </ul>
                   <div className="button-container">
-                    <a href={`/product/${product.url.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Product Information</a>
+                    <Link to={`/product/${product.url.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Product Information</Link>
                   </div>
                 </div>
               </div>

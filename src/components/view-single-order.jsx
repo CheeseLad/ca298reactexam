@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function ViewSingleOrder() {
   const [data, setData] = useState([]);
@@ -33,7 +33,7 @@ function ViewSingleOrder() {
                     <li className="list-group-item"><strong>Status: </strong>{data.status}</li>
                   </ul>
                   <div className="button-container">
-                    <a href={`/customer/${getIDFromUrl(data.customer)}`} className="btn btn-primary mr-2">View Customer Information</a>
+                    <Link to={`/customer/${getIDFromUrl(data.customer)}`} className="btn btn-primary mr-2">View Customer Information</Link>
                   </div>
                 </div>
             </div>

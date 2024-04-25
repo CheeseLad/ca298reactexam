@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function ViewSingleProduct() {
   const [data, setData] = useState([]);
@@ -28,7 +28,7 @@ function ViewSingleProduct() {
                 <h5 className="card-title">{data.name}</h5>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item"><strong>Price: </strong>€{data.price}</li>
-                    <li className="list-group-item"><strong>Category: </strong><a href={`/category/${getIDFromUrl(data.category)}`}>{getIDFromUrl(data.category)}</a></li>
+                    <li className="list-group-item"><strong>Category: </strong><Link to={`/category/${getIDFromUrl(data.category)}`}>{getIDFromUrl(data.category)}</Link></li>
                   </ul>
                 </div>
             </div>

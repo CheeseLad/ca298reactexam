@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ViewAllCategories() {
   const [data, setData] = useState([]);
@@ -23,8 +24,8 @@ function ViewAllCategories() {
                     <li className="list-group-item"><strong>Shortcode: </strong>{category.shortcode}</li>
                   </ul>
                   <div className="button-container">
-                    <a href={`/category/${category.shortcode}`} className="btn btn-primary mr-2">View Category Information</a>
-                    <a href={`/productcategory/${category.shortcode}`} className="btn btn-primary mr-2">View Products In Category</a>
+                    <Link to={`/category/${category.shortcode}`} className="btn btn-primary mr-2">View Category Information</Link>
+                    <Link to={`/productcategory/${category.shortcode}`} className="btn btn-primary mr-2">View Products In Category</Link>
                   </div>
                 </div>
               </div>

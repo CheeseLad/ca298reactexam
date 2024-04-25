@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewAllCategories from './components/view-all-categories';
@@ -35,91 +35,91 @@ root.render(
         <Route path="/categories" element={
         <div>
           <ViewAllCategories />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/category/:category" element={
         <div>
           <ViewSingleCategory />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/customers" element={
         <div>
           <ViewAllCustomers />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/customer/:customer" element={
         <div>
           <ViewSingleCustomer />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/products" element={
         <div>
           <ViewAllProducts />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/product/:product" element={
         <div>
           <ViewSingleProduct />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/productcategory/:productcategory" element={
         <div>
           <ViewAllProductsCategory />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/orders" element={
         <div>
           <ViewAllOrders />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/order/:order" element={
         <div>
           <ViewSingleOrder />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/orderitems/:orderitems" element={
         <div>
           <ViewOrderItems />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/create-category" element={ 
         <div>
           <CreateCategory />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/create-product" element={
         <div>
           <CreateProduct />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/create-customer" element={
         <div>
           <CreateCustomer />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/create-order" element={
         <div>
           <CreateOrder />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
         <Route path="/create-order-items" element={
         <div>
           <CreateOrderItems />
-          <a href="/" className="btn btn-primary create-button">Return Home</a>
+          <Link to="/" className="btn btn-primary create-button">Return Home</Link>
         </div>
         } />
       </Routes>

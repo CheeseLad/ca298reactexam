@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function ViewOrderItems() {
   const [data, setData] = useState([]);
@@ -31,8 +31,8 @@ function ViewOrderItems() {
                     <li className="list-group-item"><strong>Quantity: </strong>{order.quantity}</li>
                   </ul>
                   <div className="button-container">
-                    <a href={`/product/${getIDFromUrl(order.product)}`} className="btn btn-primary mr-2">View Product Information</a>
-                    <a href={`/order/${getIDFromUrl(order.order)}`} className="btn btn-primary mr-2">View Order Information</a>
+                    <Link to={`/product/${getIDFromUrl(order.product)}`} className="btn btn-primary mr-2">View Product Information</Link>
+                    <Link to={`/order/${getIDFromUrl(order.order)}`} className="btn btn-primary mr-2">View Order Information</Link>
                   </div>
                 </div>
               </div>

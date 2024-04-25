@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ViewAllOrders() {
   const [data, setData] = useState([]);
@@ -25,8 +26,8 @@ function ViewAllOrders() {
                     <li className="list-group-item"><strong>Status: </strong>{order.status}</li>
                   </ul>
                   <div className="button-container">
-                    <a href={`/customer/${order.customer.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Customer Information</a>
-                    <a href={`/orderitems/${order.url.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Items Ordered</a>
+                    <Link to={`/customer/${order.customer.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Customer Information</Link>
+                    <Link to={`/orderitems/${order.url.split('/').filter(part => !!part).pop()}`} className="btn btn-primary mr-2">View Items Ordered</Link>
                   </div>
                 </div>
               </div>
