@@ -12,6 +12,7 @@ import ViewAllCustomers from './components/view-all-customers';
 import ViewSingleCustomer from './components/view-single-customer';
 import ViewAllProducts from './components/view-all-products';
 import ViewSingleProduct from './components/view-single-product';
+import ViewAllProductsCategory from './components/view-all-products-category';
 import ViewAllOrders from './components/view-all-orders';
 import ViewSingleOrder from './components/view-single-order';
 import CreateCategory from './components/create-category';
@@ -64,6 +65,12 @@ root.render(
         <Route path="/product/:product" element={
         <div>
           <ViewSingleProduct />
+          <a href="/" className="btn btn-primary create-button">Return Home</a>
+        </div>
+        } />
+        <Route path="/productcategory/:productcategory" element={
+        <div>
+          <ViewAllProductsCategory />
           <a href="/" className="btn btn-primary create-button">Return Home</a>
         </div>
         } />

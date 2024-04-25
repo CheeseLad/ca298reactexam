@@ -24,6 +24,7 @@ function ViewAllCategories() {
                   </ul>
                   <div className="button-container">
                     <a href={`/category/${category.shortcode}`} className="btn btn-primary mr-2">View Category Information</a>
+                    <a href={`/productcategory/${category.shortcode}`} className="btn btn-primary mr-2">View Products In Category</a>
                   </div>
                 </div>
               </div>
